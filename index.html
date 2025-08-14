@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhanesh Reddy | Web Developer & Automation Specialist</title>
+    <meta
+      name="description"
+      content="Professional portfolio of Dhanesh Reddy - Web Developer & Automation Specialist with expertise in Next.js, Tailwind CSS, and chatbot integrations"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00f0ff", // Neon blue
+              secondary: "#ff00f0", // Neon pink
+              dark: "#0f172a",
+              light: "#f8fafc",
+              accent: "#39ff14", // Neon green
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+              "neon-glow": "neon-glow 1.5s ease-in-out infinite alternate",
+              "spin-slow": "spin 20s linear infinite",
+              "spin-slower": "spin 30s linear infinite",
+              "spin-slowest": "spin 40s linear infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              "neon-glow": {
+                "0%": {
+                  "text-shadow":
+                    "0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--tw-color-primary), 0 0 20px var(--tw-color-primary)",
+                },
+                "100%": {
+                  "text-shadow":
+                    "0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--tw-color-primary), 0 0 40px var(--tw-color-primary)",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      body {
+        user-select: none;
+        font-family: "Poppins", sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .neon-text {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff,
+          0 0 15px var(--tw-color-primary), 0 0 20px var(--tw-color-primary);
+      }
+
+      .neon-box {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff,
+          0 0 30px var(--tw-color-primary);
+      }
+
+      .transition-slow {
+        transition: all 0.5s ease;
+      }
+
+      .bg-grid-pattern {
+        background-image: linear-gradient(
+            rgba(0, 240, 255, 0.1) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+
+      @keyframes spin-reverse {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+
+      .animate-spin-reverse {
+        animation: spin-reverse 1s linear infinite;
+      }
+
+      .animate-spin-slow-reverse {
+        animation: spin-reverse 4s linear infinite;
+      }
+
+      .animate-spin-slower-reverse {
+        animation: spin-reverse 6s linear infinite;
+      }
+
+      .animate-spin-slowest-reverse {
+        animation: spin-reverse 8s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-light">
+    <!-- Navigation -->
+    <nav class="bg-dark shadow-lg fixed w-full z-50 border-b border-primary/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="flex items-center text-2xl font-bold text-primary neon-text"
+            >
+              <img
+                src="https://res.cloudinary.com/ddqz4s18g/image/upload/v1755174257/20210718_125420-1-01_3_1_pmbeiy.jpg"
+                alt="Dhanesh"
+                class="h-8 w-8 rounded-full mr-2 border border-primary"
+              />
+              <span
+                class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-bold"
+                >Dhanesh</span
+              >
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="text-gray-300 hover:text-primary transition-slow flex items-center group"
+            >
+              <i
+                class="fas fa-user mr-2 group-hover:scale-125 transition-slow"
+              ></i>
+              About
+            </a>
+            <a
+              href="#skills"
+              class="text-gray-300 hover:text-primary transition-slow flex items-center group"
+            >
+              <i
+                class="fas fa-code mr-2 group-hover:scale-125 transition-slow"
+              ></i>
+              Skills
+            </a>
+            <a
+              href="#experience"
+              class="text-gray-300 hover:text-primary transition-slow flex items-center group"
+            >
+              <i
+                class="fas fa-briefcase mr-2 group-hover:scale-125 transition-slow"
+              ></i>
+              Experience
+            </a>
+            <a
+              href="#portfolio"
+              class="text-gray-300 hover:text-primary transition-slow flex items-center group"
+            >
+              <i
+                class="fas fa-project-diagram mr-2 group-hover:scale-125 transition-slow"
+              ></i>
+              Projects
+            </a>
+            <a
+              href="#testimonials"
+              class="text-gray-300 hover:text-primary transition-slow flex items-center group"
+            >
+              <i
+                class="fas fa-quote-left mr-2 group-hover:scale-125 transition-slow"
+              ></i>
+              Testimonials
+            </a>
+            <a
+              href="#contact"
+              class="text-gray-300 hover:text-primary transition-slow flex items-center group"
+            >
+              <i
+                class="fas fa-envelope mr-2 group-hover:scale-125 transition-slow"
+              ></i>
+              Contact
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-300 hover:text-primary focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden h-auto bg-dark shadow-lg border-t border-primary/20"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-gray-900 rounded-md transition-slow flex items-center"
+          >
+            <i class="fas fa-user mr-2 w-5"></i> About
+          </a>
+          <a
+            href="#skills"
+            class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-gray-900 rounded-md transition-slow flex items-center"
+          >
+            <i class="fas fa-code mr-2 w-5"></i> Skills
+          </a>
+          <a
+            href="#experience"
+            class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-gray-900 rounded-md transition-slow flex items-center"
+          >
+            <i class="fas fa-briefcase mr-2 w-5"></i> Experience
+          </a>
+          <a
+            href="#portfolio"
+            class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-gray-900 rounded-md transition-slow flex items-center"
+          >
+            <i class="fas fa-project-diagram mr-2 w-5"></i> Projects
+          </a>
+          <a
+            href="#testimonials"
+            class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-gray-900 rounded-md transition-slow flex items-center"
+          >
+            <i class="fas fa-quote-left mr-2 w-5"></i> Testimonials
+          </a>
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-gray-900 rounded-md transition-slow flex items-center"
+          >
+            <i class="fas fa-envelope mr-2 w-5"></i> Contact
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen bg-gradient-to-br from-dark via-gray-900 to-dark pt-32 pb-20 px-6 bg-grid-pattern relative overflow-hidden"
+    >
+      <!-- Animated background particles -->
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute animate-float" style="top: 10%; left: 10%">
+          <div class="w-4 h-4 bg-primary rounded-full"></div>
+        </div>
+        <div class="absolute animate-float" style="top: 70%; left: 80%">
+          <div class="w-6 h-6 bg-secondary rounded-full"></div>
+        </div>
+        <div class="absolute animate-float" style="top: 40%; left: 60%">
+          <div class="w-5 h-5 bg-accent rounded-full"></div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto relative">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-12"
+        >
+          <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+            <div class="space-y-6">
+              <h1
+                class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4"
+              >
+                <span
+                  class="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent animate-gradient"
+                >
+                  Hi, I'm
+                </span>
+                <span class="block neon-text mt-2 animate-pulse-slow"
+                  >Dhanesh Reddy</span
+                >
+              </h1>
+
+              <h2
+                class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-300 animate-fade-in-up"
+              >
+                Web Developer & Automation Specialist
+              </h2>
+
+              <p
+                class="text-xl leading-relaxed max-w-lg text-gray-300 animate-fade-in-up delay-200"
+              >
+                I build high-performance websites and intelligent automation
+                solutions that help businesses scale efficiently.
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row gap-6 animate-fade-in-up delay-300"
+              >
+                <a
+                  href="#contact"
+                  class="group bg-gradient-to-r from-primary to-accent text-dark px-8 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center neon-box"
+                >
+                  <i
+                    class="fas fa-paper-plane mr-2 group-hover:rotate-45 transition-transform"
+                  ></i>
+                  Hire Me
+                </a>
+                <a
+                  href="dhanesh_reddy.pdf"
+                  class="group border-2 border-primary hover:border-accent px-8 py-2 rounded-lg font-semibold hover:bg-accent hover:text-dark transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  download
+                >
+                  <i
+                    class="fas fa-download mr-2 group-hover:translate-y-1 transition-transform"
+                  ></i>
+                  Download CV
+                </a>
+              </div>
+
+              <div class="flex mt-8 space-x-6 animate-fade-in-up delay-400">
+                <a
+                  href="https://github.com/dhanesh1232"
+                  class="group text-gray-300 hover:text-primary text-3xl transition-all duration-300 hover:scale-125"
+                >
+                  <i
+                    class="fab fa-github group-hover:rotate-12 transition-transform"
+                  ></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/dhanesh-mekalthuru-5baa9323b/"
+                  class="group text-gray-300 hover:text-primary text-3xl transition-all duration-300 hover:scale-125"
+                >
+                  <i
+                    class="fab fa-linkedin group-hover:rotate-12 transition-transform"
+                  ></i>
+                </a>
+                <a
+                  href="https://x.com/Dhanesh39104272"
+                  class="group text-gray-300 hover:text-primary text-3xl transition-all duration-300 hover:scale-125"
+                >
+                  <i
+                    class="fab fa-twitter group-hover:rotate-12 transition-transform"
+                  ></i>
+                </a>
+                <a
+                  href="https://wa.me/918143963821"
+                  class="group text-gray-300 hover:text-primary text-3xl transition-all duration-300 hover:scale-125"
+                >
+                  <i
+                    class="fab fa-whatsapp group-hover:rotate-12 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 flex justify-center z-10">
+            <div class="relative">
+              <!-- Animated decorative rings -->
+              <div class="absolute inset-0 -m-8 animate-spin-slow opacity-75">
+                <div
+                  class="w-full h-full rounded-full border-4 border-l-transparent border-r-transparent border-primary/40 blur-sm"
+                ></div>
+              </div>
+
+              <div
+                class="absolute inset-0 -m-16 animate-spin-slower-reverse opacity-75"
+              >
+                <div
+                  class="w-full h-full rounded-full border-4 border-t-transparent border-b-transparent border-secondary/40 blur-sm"
+                ></div>
+              </div>
+
+              <div
+                class="absolute inset-0 -m-24 animate-spin-slowest opacity-75"
+              >
+                <div
+                  class="w-full h-full rounded-full border-4 border-r-transparent border-l-transparent border-accent/40 blur-sm"
+                ></div>
+              </div>
+
+              <!-- Profile image with glow effect -->
+              <div class="relative group">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-xl opacity-75 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <img
+                  src="https://res.cloudinary.com/ddqz4s18g/image/upload/v1755174257/20210718_125420-1-01_3_1_pmbeiy.jpg"
+                  alt="Dhanesh Reddy"
+                  class="w-72 h-72 md:w-96 md:h-96 relative rounded-full border-4 border-primary shadow-2xl object-cover animate-float z-10 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              <!-- Animated availability badge -->
+              <div
+                class="absolute -bottom-5 -right-5 bg-gradient-to-r from-accent to-primary text-dark px-6 py-3 rounded-lg shadow-2xl font-bold neon-box z-20 animate-bounce-slow transform hover:scale-110 transition-transform cursor-pointer"
+              >
+                <i class="fas fa-check-circle mr-2"></i>
+                Available for work
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-16 px-6 max-w-7xl mx-auto scroll-mt-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/3 flex justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            alt="Dhanesh working"
+            class="rounded-lg shadow-xl w-full max-w-md border border-primary/30 hover:border-primary transition-slow"
+          />
+        </div>
+        <div class="md:w-2/3">
+          <h2 class="text-3xl font-bold mb-6 text-light flex items-center">
+            <span class="bg-primary w-8 h-1 mr-4"></span>
+            About Me
+          </h2>
+          <p class="text-lg leading-relaxed mb-6 text-gray-300">
+            I'm a passionate full-stack developer with 3+ years of experience
+            specializing in modern web technologies and automation solutions. My
+            expertise lies in creating performant, scalable web applications and
+            integrating intelligent automation to streamline business processes.
+          </p>
+          <p class="text-lg leading-relaxed mb-6 text-gray-300">
+            What sets me apart is my ability to understand both technical
+            requirements and business objectives, allowing me to deliver
+            solutions that not only work flawlessly but also drive real business
+            value.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md border border-gray-700 hover:border-primary transition-slow"
+            >
+              <div class="text-primary text-2xl mb-2">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="font-bold">50+ Projects</h3>
+              <p class="text-sm text-gray-400">Completed</p>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md border border-gray-700 hover:border-primary transition-slow"
+            >
+              <div class="text-primary text-2xl mb-2">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="font-bold">35+ Clients</h3>
+              <p class="text-sm text-gray-400">Satisfied</p>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md border border-gray-700 hover:border-primary transition-slow"
+            >
+              <div class="text-primary text-2xl mb-2">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="font-bold">3+ Years</h3>
+              <p class="text-sm text-gray-400">Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-16 px-6 bg-gray-900 scroll-mt-20">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-light text-center">
+          <span class="border-b-4 border-primary pb-2">Technical Skills</span>
+        </h2>
+
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold mb-6 flex items-center text-light">
+            <i class="fas fa-laptop-code text-primary mr-3"></i> Web Development
+          </h3>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+          >
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">HTML5</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">CSS3</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">JavaScript</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">React</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Next.js</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold mb-6 flex items-center text-light">
+            <i class="fas fa-server text-primary mr-3"></i> Backend & Databases
+          </h3>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+          >
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Node.js</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                alt="Express"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Express</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">MongoDB</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">MySQL</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                alt="Firebase"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Firebase</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                alt="GraphQL"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">GraphQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold mb-6 flex items-center text-light">
+            <i class="fas fa-robot text-primary mr-3"></i> Automation & APIs
+          </h3>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+          >
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Python</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fab fa-whatsapp text-4xl text-green-500 mb-2"></i>
+              <span class="font-medium">WhatsApp API</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i
+                class="fab fa-facebook-messenger text-4xl text-blue-500 mb-2"
+              ></i>
+              <span class="font-medium">Messenger API</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twilio/twilio-original.svg"
+                alt="Twilio"
+                class="w-12 h-12 mb-2"
+              />
+              <span class="font-medium">Twilio</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fas fa-exchange-alt text-4xl text-purple-500 mb-2"></i>
+              <span class="font-medium">Zapier</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fas fa-cloud text-4xl text-blue-400 mb-2"></i>
+              <span class="font-medium">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-6 flex items-center text-light">
+            <i class="fas fa-chart-line text-primary mr-3"></i> Marketing & AI
+          </h3>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+          >
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fab fa-google text-4xl text-blue-500 mb-2"></i>
+              <span class="font-medium">Google Ads</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fab fa-facebook text-4xl text-blue-600 mb-2"></i>
+              <span class="font-medium">Facebook Ads</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fas fa-search-dollar text-4xl text-green-500 mb-2"></i>
+              <span class="font-medium">SEO</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fas fa-brain text-4xl text-purple-500 mb-2"></i>
+              <span class="font-medium">AI Agents</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fas fa-chart-pie text-4xl text-yellow-500 mb-2"></i>
+              <span class="font-medium">Analytics</span>
+            </div>
+            <div
+              class="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-slow flex flex-col items-center border border-gray-700 hover:border-primary"
+            >
+              <i class="fas fa-mail-bulk text-4xl text-red-500 mb-2"></i>
+              <span class="font-medium">Email Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-16 px-6 scroll-mt-20">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-light text-center">
+          <span class="border-b-4 border-primary pb-2">Work Experience</span>
+        </h2>
+
+        <div class="relative">
+          <!-- Timeline line -->
+          <div
+            class="hidden md:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-primary to-secondary transform -translate-x-1/2"
+          ></div>
+
+          <!-- Timeline items -->
+          <div class="space-y-12">
+            <!-- Experience 1 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                <h3 class="text-xl font-bold text-light">
+                  Freelance Web Developer
+                </h3>
+                <p class="text-primary font-medium">Self-Employed</p>
+                <p class="text-gray-400">Aug 2023 - Present</p>
+              </div>
+              <div
+                class="hidden md:flex justify-center items-center w-16 h-16 rounded-full bg-primary text-dark absolute left-1/2 transform -translate-x-1/2 neon-box"
+              >
+                <i class="fas fa-laptop-code text-2xl"></i>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700"
+                >
+                  <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                    <li>
+                      Developed and launched 20+ custom websites for diverse
+                      clients
+                    </li>
+                    <li>
+                      Specialized in Next.js, React and Tailwind CSS
+                      implementations
+                    </li>
+                    <li>
+                      Built high-converting landing pages and e-commerce
+                      solutions
+                    </li>
+                    <li>
+                      Maintained long-term relationships with repeat clients
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div
+                class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right order-1 md:order-none"
+              >
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700"
+                >
+                  <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                    <li>Created automation solutions for small businesses</li>
+                    <li>
+                      Developed custom chatbots and WhatsApp integration systems
+                    </li>
+                    <li>Implemented payment processing and CRM integrations</li>
+                    <li>
+                      Provided technical consulting and solution architecture
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="hidden md:flex justify-center items-center w-16 h-16 rounded-full bg-secondary text-dark absolute left-1/2 transform -translate-x-1/2 neon-box"
+              >
+                <i class="fas fa-robot text-2xl"></i>
+              </div>
+              <div class="md:w-1/2 md:pl-12 order-0 md:order-none">
+                <h3 class="text-xl font-bold text-light">
+                  Automation Specialist
+                </h3>
+                <p class="text-secondary font-medium">Freelance Projects</p>
+                <p class="text-gray-400">Mar 2024 - Present</p>
+              </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="relative flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                <h3 class="text-xl font-bold text-light">
+                  Technical Consultant
+                </h3>
+                <p class="text-primary font-medium">Friend's Startups</p>
+                <p class="text-gray-400">Jun 2023 - Present</p>
+              </div>
+              <div
+                class="hidden md:flex justify-center items-center w-16 h-16 rounded-full bg-accent text-dark absolute left-1/2 transform -translate-x-1/2 neon-box"
+              >
+                <i class="fas fa-handshake text-2xl"></i>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <div
+                  class="bg-gray-800 p-6 rounded-lg shadow-md border border-gray-700"
+                >
+                  <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                    <li>
+                      Provided technical guidance for early-stage startups
+                    </li>
+                    <li>Helped implement MVPs and proof-of-concept projects</li>
+                    <li>
+                      Offered code reviews and architecture recommendations
+                    </li>
+                    <li>
+                      Mentored junior developers in modern web technologies
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 px-6 bg-gray-900 scroll-mt-20">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-light text-center">
+          <span class="border-b-4 border-primary pb-2">Services I Offer</span>
+        </h2>
+        <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-gray-300">
+          I provide comprehensive web development and automation solutions
+          tailored to your business needs.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-light">
+              Custom Web Development
+            </h3>
+            <p class="text-gray-400">
+              Bespoke websites built with modern technologies like Next.js and
+              Tailwind CSS, optimized for performance and SEO.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Responsive Design
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                SEO Optimized
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Performance Focused
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-light">
+              Chatbot & Automation
+            </h3>
+            <p class="text-gray-400">
+              Intelligent chatbots for WhatsApp, Messenger, and websites to
+              automate customer interactions and support.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                24/7 Customer Support
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Lead Generation
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Multi-platform Integration
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-light">API Integrations</h3>
+            <p class="text-gray-400">
+              Seamless integration of third-party APIs to connect your systems
+              and automate workflows.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Payment Gateways
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                CRM Systems
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Marketing Tools
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-light">
+              E-commerce Solutions
+            </h3>
+            <p class="text-gray-400">
+              Complete online store setup with secure payments, inventory
+              management, and analytics.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Product Management
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Secure Checkout
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Order Tracking
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-light">
+              Website Optimization
+            </h3>
+            <p class="text-gray-400">
+              Speed optimization and performance tuning to improve user
+              experience and search rankings.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Lighthouse Scores 90+
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Image Optimization
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Code Minification
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-light">Technical Support</h3>
+            <p class="text-gray-400">
+              Ongoing maintenance and support to keep your website running
+              smoothly and securely.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Regular Updates
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Security Patches
+              </li>
+              <li class="flex items-center text-gray-300">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Bug Fixes
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-16 px-6 scroll-mt-20">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-light text-center">
+          <span class="border-b-4 border-primary pb-2">Featured Projects</span>
+        </h2>
+        <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-gray-300">
+          Here are some of my recent projects that showcase my skills and
+          expertise.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="relative overflow-hidden h-60">
+              <img
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Dental Clinic Website"
+                class="w-full h-full object-cover transition duration-500 hover:scale-110"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-xl font-bold text-white">
+                  Dental Clinic Website
+                </h3>
+                <p class="text-gray-300">Next.js, Tailwind CSS, MongoDB</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mb-4">
+                A modern website for a dental practice with online appointment
+                booking, patient portal, and treatment information.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-900 text-blue-300 text-xs px-3 py-1 rounded-full"
+                  >Next.js</span
+                >
+                <span
+                  class="bg-purple-900 text-purple-300 text-xs px-3 py-1 rounded-full"
+                  >Tailwind</span
+                >
+                <span
+                  class="bg-green-900 text-green-300 text-xs px-3 py-1 rounded-full"
+                  >MongoDB</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary font-semibold hover:underline flex items-center"
+                >
+                  View Project <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-primary"
+                  aria-label="GitHub repository"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="relative overflow-hidden h-60">
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="E-commerce Store"
+                class="w-full h-full object-cover transition duration-500 hover:scale-110"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-xl font-bold text-white">
+                  E-commerce Platform
+                </h3>
+                <p class="text-gray-300">React, Node.js, Stripe</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mb-4">
+                Full-featured online store with product management, secure
+                checkout, inventory system, and admin dashboard.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-900 text-blue-300 text-xs px-3 py-1 rounded-full"
+                  >React</span
+                >
+                <span
+                  class="bg-green-900 text-green-300 text-xs px-3 py-1 rounded-full"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-purple-900 text-purple-300 text-xs px-3 py-1 rounded-full"
+                  >Stripe</span
+                >
+                <span
+                  class="bg-yellow-900 text-yellow-300 text-xs px-3 py-1 rounded-full"
+                  >MongoDB</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary font-semibold hover:underline flex items-center"
+                >
+                  View Project <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-primary"
+                  aria-label="GitHub repository"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-slow transform hover:-translate-y-2 border border-gray-700 hover:border-primary"
+          >
+            <div class="relative overflow-hidden h-60">
+              <img
+                src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Chatbot Automation"
+                class="w-full h-full object-cover transition duration-500 hover:scale-110"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-xl font-bold text-white">Chatbot Automation</h3>
+                <p class="text-gray-300">WhatsApp, Twilio, Node.js</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mb-4">
+                Multi-platform chatbot for lead generation, customer support,
+                and appointment scheduling with WhatsApp integration.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-green-900 text-green-300 text-xs px-3 py-1 rounded-full"
+                  >WhatsApp</span
+                >
+                <span
+                  class="bg-blue-900 text-blue-300 text-xs px-3 py-1 rounded-full"
+                  >Twilio</span
+                >
+                <span
+                  class="bg-yellow-900 text-yellow-300 text-xs px-3 py-1 rounded-full"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-red-900 text-red-300 text-xs px-3 py-1 rounded-full"
+                  >Dialogflow</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <a
+                  href="#"
+                  class="text-primary font-semibold hover:underline flex items-center"
+                >
+                  View Project <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-primary"
+                  aria-label="GitHub repository"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 px-6 bg-gray-900 scroll-mt-20">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-light text-center">
+          <span class="border-b-4 border-primary pb-2"
+            >Client Testimonials</span
+          >
+        </h2>
+        <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-gray-300">
+          Here's what some of my clients have to say about working with me.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-400 italic mb-6">
+              "Dhanesh transformed our online presence with a stunning website
+              that perfectly represents our brand. His attention to detail and
+              technical expertise were impressive throughout the project."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/43.jpg"
+                alt="Sarah Johnson"
+                class="w-12 h-12 rounded-full mr-4 border border-primary"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="font-bold text-light">Sarah Johnson</h4>
+                <p class="text-gray-400 text-sm">CEO, DentalCare Clinic</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-400 italic mb-6">
+              "The chatbot Dhanesh developed for our e-commerce store has
+              reduced our customer service workload by 60% while improving
+              customer satisfaction. Highly recommended!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Michael Chen"
+                class="w-12 h-12 rounded-full mr-4 border border-primary"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="font-bold text-light">Michael Chen</h4>
+                <p class="text-gray-400 text-sm">Founder, StyleHub</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-400 italic mb-6">
+              "Working with Dhanesh was a pleasure. He delivered our project on
+              time, within budget, and his technical solutions were innovative
+              and effective. Will definitely work with him again."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Priya Patel"
+                class="w-12 h-12 rounded-full mr-4 border border-primary"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="font-bold text-light">Priya Patel</h4>
+                <p class="text-gray-400 text-sm">
+                  Marketing Director, TechSolutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-6 scroll-mt-20">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700"
+        >
+          <div class="md:flex">
+            <div
+              class="md:w-1/2 bg-gradient-to-br from-primary/20 to-secondary/20 p-8 md:p-12 text-white border-r border-gray-700"
+            >
+              <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+              <p class="mb-8 text-gray-300">
+                Have a project in mind or want to discuss potential
+                collaboration? Feel free to reach out!
+              </p>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="text-2xl mr-4 mt-1 text-primary">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-light">Email</h3>
+                    <a
+                      href="mailto:dhaneshreddy980@gmail.com"
+                      class="hover:underline text-gray-300"
+                      >dhaneshreddy980@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="text-2xl mr-4 mt-1 text-primary">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-light">Phone</h3>
+                    <a
+                      href="tel:+918143963821"
+                      class="hover:underline text-gray-300"
+                      >+91 81439 63821</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="text-2xl mr-4 mt-1 text-primary">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-light">WhatsApp</h3>
+                    <a
+                      href="https://wa.me/918143963821"
+                      class="hover:underline text-gray-300"
+                      >Chat on WhatsApp</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="text-2xl mr-4 mt-1 text-primary">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-light">Location</h3>
+                    <p class="text-gray-300">Tirupati, India</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 flex space-x-4">
+                <a
+                  href="https://github.com/dhanesh1232"
+                  class="text-gray-300 hover:text-primary text-2xl transition-slow hover:scale-125"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/dhanesh-mekalthuru-5baa9323b/"
+                  class="text-gray-300 hover:text-primary text-2xl transition-slow hover:scale-125"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://x.com/Dhanesh39104272"
+                  class="text-gray-300 hover:text-primary text-2xl transition-slow hover:scale-125"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/itx__.ecodrix/"
+                  class="text-gray-300 hover:text-primary text-2xl transition-slow hover:scale-125"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="md:w-1/2 p-8 md:p-12">
+              <h2 class="text-3xl font-bold mb-6 text-light">
+                Send Me a Message
+              </h2>
+              <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-gray-300 mb-2"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="John Doe"
+                      class="w-full p-3 border border-gray-700 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-300"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-gray-300 mb-2"
+                      >Your Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="john@example.com"
+                      class="w-full p-3 border border-gray-700 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-300"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-gray-300 mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    placeholder="Project Inquiry"
+                    class="w-full p-3 border border-gray-700 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-300"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="message" class="block text-gray-300 mb-2"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    placeholder="Tell me about your project..."
+                    rows="5"
+                    class="w-full p-3 border border-gray-700 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-300"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-dark px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-slow flex items-center justify-center neon-box"
+                >
+                  <i class="fas fa-paper-plane mr-2"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <img
+                src="https://avatars.githubusercontent.com/u/12345678?v=4"
+                alt="Dhanesh"
+                class="h-8 w-8 rounded-full mr-2 border border-primary"
+              />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+                >Dhanesh</span
+              >
+            </h3>
+            <p class="text-gray-400">
+              Web Developer & Automation Specialist creating digital solutions
+              that drive business growth.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Chatbot Automation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >API Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >E-commerce Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-slow"
+                  >Website Optimization</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Connect</h3>
+            <div class="flex space-x-4 mb-4">
+              <a
+                href="https://github.com/dhanesh1232"
+                class="text-gray-400 hover:text-primary text-2xl transition-slow hover:scale-125"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dhanesh-mekalthuru-5baa9323b/"
+                class="text-gray-400 hover:text-primary text-2xl transition-slow hover:scale-125"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://x.com/Dhanesh39104272"
+                class="text-gray-400 hover:text-primary text-2xl transition-slow hover:scale-125"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/itx__.ecodrix/"
+                class="text-gray-400 hover:text-primary text-2xl transition-slow hover:scale-125"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/918143963821"
+                class="text-gray-400 hover:text-primary text-2xl transition-slow hover:scale-125"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+            <p class="text-gray-400 mb-2">
+              <i class="fas fa-envelope mr-2 text-primary"></i>
+              dhaneshreddy980@gmail.com
+            </p>
+            <p class="text-gray-400">
+              <i class="fas fa-phone-alt mr-2 text-primary"></i> +91 81439 63821
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Dhanesh Reddy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-primary text-dark p-3 w-12 h-12 flex items-center justify-center rounded-full hover:bg-primary/90 shadow-lg opacity-0 invisible transition-all duration-300 neon-box"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        // Toggle between menu and cross icon
+        const menuIcon = mobileMenuButton.querySelector("i");
+        if (menuIcon.classList.contains("fa-bars")) {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-times");
+        } else {
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.querySelector("i").classList.remove("fa-times");
+          mobileMenuButton.querySelector("i").classList.add("fa-bars");
+        });
+      });
+
+      // Back to top button
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          const scrollPosition =
+            window.scrollY || document.documentElement.scrollTop;
+          const showBackToTop = scrollPosition > 300;
+
+          // Use requestAnimationFrame for smoother animation
+          requestAnimationFrame(() => {
+            backToTopButton.classList.toggle("opacity-0", !showBackToTop);
+            backToTopButton.classList.toggle("invisible", !showBackToTop);
+            backToTopButton.classList.toggle("translate-y-10", !showBackToTop);
+            backToTopButton.classList.toggle("opacity-100", showBackToTop);
+            backToTopButton.classList.toggle("visible", showBackToTop);
+            backToTopButton.classList.toggle("translate-y-0", showBackToTop);
+
+            // Ensure transition classes are always present
+            backToTopButton.classList.add(
+              "transition-all",
+              "duration-300",
+              "ease-in-out"
+            );
+          });
+        },
+        { passive: true }
+      ); // Add passive flag for better scroll performance
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Smooth scrolling for all links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Intersection Observer for animations
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-fadeIn");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+      };
+
+      // Run after DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        animateOnScroll();
+
+        // Add loading="lazy" to all images that don't have it
+        document.querySelectorAll("img:not([loading])").forEach((img) => {
+          img.setAttribute("loading", "lazy");
+        });
+      });
+    </script>
+  </body>
+</html>
