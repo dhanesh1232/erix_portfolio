@@ -1106,10 +1106,14 @@
     <!-- Portfolio -->
     <section id="portfolio" class="py-16 px-6 scroll-mt-20">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-4 text-light text-center">
+        <h2
+          class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-light text-center"
+        >
           <span class="border-b-4 border-primary pb-2">Featured Projects</span>
         </h2>
-        <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-gray-300">
+        <p
+          class="text-base md:text-lg text-center mb-12 max-w-3xl mx-auto text-gray-300"
+        >
           Here are some of my recent projects that showcase my skills and
           expertise.
         </p>
@@ -1310,18 +1314,156 @@
           Here's what some of my clients have to say about working with me.
         </p>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Testimonial 1 -->
+        <!-- Mobile Slider (< 768px) -->
+        <div class="md:hidden relative w-full">
+          <div id="testimonials-container" class="overflow-hidden">
+            <div
+              id="testimonials-slider"
+              class="flex transition-transform duration-500"
+            >
+              <!-- Testimonial Cards -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="text-yellow-400 text-xl mr-2">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 italic mb-6">
+                    "Dhanesh transformed our online presence with a stunning
+                    website that perfectly represents our brand. His attention
+                    to detail and technical expertise were impressive throughout
+                    the project."
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/43.jpg"
+                      alt="Sarah Johnson"
+                      class="w-12 h-12 rounded-full mr-4 border border-primary"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h4 class="font-bold text-light">Sarah Johnson</h4>
+                      <p class="text-gray-400 text-sm">
+                        CEO, DentalCare Clinic
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="text-yellow-400 text-xl mr-2">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 italic mb-6">
+                    "The chatbot Dhanesh developed for our e-commerce store has
+                    reduced our customer service workload by 60% while improving
+                    customer satisfaction. Highly recommended!"
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt="Michael Chen"
+                      class="w-12 h-12 rounded-full mr-4 border border-primary"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h4 class="font-bold text-light">Michael Chen</h4>
+                      <p class="text-gray-400 text-sm">Founder, StyleHub</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="text-yellow-400 text-xl mr-2">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 italic mb-6">
+                    "Working with Dhanesh was a pleasure. He delivered our
+                    project on time, within budget, and his technical solutions
+                    were innovative and effective. Will definitely work with him
+                    again."
+                  </p>
+                  <div class="flex items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/65.jpg"
+                      alt="Priya Patel"
+                      class="w-12 h-12 rounded-full mr-4 border border-primary"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h4 class="font-bold text-light">Priya Patel</h4>
+                      <p class="text-gray-400 text-sm">
+                        Marketing Director, TechSolutions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Navigation Buttons -->
+          <button
+            id="prev-testimonial"
+            class="md:hidden absolute left-0 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center -translate-x-4 bg-primary text-dark p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            id="next-testimonial"
+            class="md:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 h-10 w-10 flex items-center justify-center bg-primary text-dark p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Mobile Dots Navigation -->
+          <div class="md:hidden flex justify-center mt-6 space-x-2">
+            <button
+              class="w-3 h-3 rounded-full bg-primary opacity-100 transition-opacity"
+              data-slide="0"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-primary opacity-50 hover:opacity-75 transition-opacity"
+              data-slide="1"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-primary opacity-50 hover:opacity-75 transition-opacity"
+              data-slide="2"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Desktop Grid (>= 768px) -->
+        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
             class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
           >
             <div class="flex items-center mb-4">
               <div class="text-yellow-400 text-xl mr-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
               </div>
             </div>
             <p class="text-gray-400 italic mb-6">
@@ -1343,17 +1485,14 @@
             </div>
           </div>
 
-          <!-- Testimonial 2 -->
           <div
             class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
           >
             <div class="flex items-center mb-4">
               <div class="text-yellow-400 text-xl mr-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
               </div>
             </div>
             <p class="text-gray-400 italic mb-6">
@@ -1375,17 +1514,14 @@
             </div>
           </div>
 
-          <!-- Testimonial 3 -->
           <div
             class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition-slow"
           >
             <div class="flex items-center mb-4">
               <div class="text-yellow-400 text-xl mr-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
               </div>
             </div>
             <p class="text-gray-400 italic mb-6">
@@ -1409,6 +1545,51 @@
             </div>
           </div>
         </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.getElementById("testimonials-slider");
+            const prevBtn = document.getElementById("prev-testimonial");
+            const nextBtn = document.getElementById("next-testimonial");
+            const dots = document.querySelectorAll("[data-slide]");
+
+            let currentSlide = 0;
+            const slideCount = slider.children.length;
+
+            function updateSlider() {
+              slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+              dots.forEach((dot, index) => {
+                dot.style.opacity = index === currentSlide ? "1" : "0.5";
+              });
+            }
+
+            function nextSlide() {
+              currentSlide = (currentSlide + 1) % slideCount;
+              updateSlider();
+            }
+
+            function prevSlide() {
+              currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+              updateSlider();
+            }
+
+            prevBtn?.addEventListener("click", prevSlide);
+            nextBtn?.addEventListener("click", nextSlide);
+
+            dots.forEach((dot, index) => {
+              dot.addEventListener("click", () => {
+                currentSlide = index;
+                updateSlider();
+              });
+            });
+
+            // Auto-slide
+            setInterval(nextSlide, 5000);
+
+            // Initial update
+            updateSlider();
+          });
+        </script>
       </div>
     </section>
 
@@ -1422,7 +1603,9 @@
             <div
               class="md:w-1/2 bg-gradient-to-br from-primary/20 to-secondary/20 p-8 md:p-12 text-white border-r border-gray-700"
             >
-              <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+              <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-6">
+                Get In Touch
+              </h2>
               <p class="mb-8 text-gray-300">
                 Have a project in mind or want to discuss potential
                 collaboration? Feel free to reach out!
@@ -1511,8 +1694,10 @@
             </div>
 
             <div class="md:w-1/2 p-8 md:p-12">
-              <h2 class="text-3xl font-bold mb-6 text-light">
-                Send Me a Message
+              <h2
+                class="text-xl md:text-2xl lg:text-3xl font-bold mb-6 text-light"
+              >
+                Send Me a Message`
               </h2>
               <form class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
@@ -1584,7 +1769,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div>
             <h3 class="text-xl font-bold mb-4 flex items-center">
               <img
