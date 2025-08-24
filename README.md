@@ -30,9 +30,9 @@ Welcome to my portfolio! I'm a passionate developer focused on creating impactfu
 
 ## 📫 Contact
 
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- Email: dhaneshreddy980@gmail.com
+- LinkedIn: https://www.linkedin.com/in/dhanesh-mekalthuru-5baa9323b/
+- GitHub: https://github.com/dhanesh1232/
 
 ## 📄 Resume
 
